@@ -6,12 +6,12 @@ créer un compte ansible avec les droits sudo
 Installation SSH key
 --------------------
 
-ssh-keygen -t rsa
-ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM1 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM2 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM3 
+<p>ssh-keygen -t rsa</p>
+<p>ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM1 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM2 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM3</p> 
 
 ou avec les adresses ip
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.155 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.156 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.157
+<p>ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.155 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.156 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.157</p>
 
 commande ansible
 -----------------
