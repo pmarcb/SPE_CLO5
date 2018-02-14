@@ -9,7 +9,7 @@ Installation SSH key
 ssh-keygen -t rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM1 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM2 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@VM3 
 
-ou avec les addresses ip
+ou avec les adresses ip
 
 ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.155 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.156 && ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.157
 
