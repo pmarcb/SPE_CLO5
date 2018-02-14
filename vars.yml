@@ -1,0 +1,8 @@
+---
+registry_users:
+  - username: ansible
+    password: mouet23te
+  - username: ansible01
+    password: mouet23te
+registry_host: 193.168.1.155
+registry_port: 5000

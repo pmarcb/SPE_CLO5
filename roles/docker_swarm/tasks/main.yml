@@ -1,0 +1,27 @@
+- name: install package for docker
+  apt: name="{{item}}" update_cache=yes
+  with_items:
+   - apt-transport-https
+   - ca-certificates
+   - curl
+   - gnupg2
+   - software-properties-common
+
+- name: Add Docker apt key.
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    state: present
+  register: add_repository_key
+  ignore_errors: true
+
+- name: Add Docker repository.
+  apt_repository:
+    repo: 'deb [arch=amd64] https://download.docker.com/linux/debian wheezy stable'
+    state: present
+    update_cache: yes
+
+- name: Install docker Community
+  apt: name="{{item}}" update_cache=yes
+  with_items:
+   - docker-ce

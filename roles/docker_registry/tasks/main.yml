@@ -1,0 +1,4 @@
+- name: install registry cert
+  copy:
+    src: borras_m-CA.crt
+    dest: /etc/ssl/private
