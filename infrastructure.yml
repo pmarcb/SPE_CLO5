@@ -43,3 +43,17 @@
 
      - name: look errors
        debug: var=worker.stderr
+
+ - name: install registry
+   hosts: master
+   remote_user: ansible
+
+   roles:
+     - docker_registry
+
+ - name: install Gitlab
+   hosts: master
+   remote_user: ansible
+
+   roles:
+     - gitlab_ce

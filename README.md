@@ -16,4 +16,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@193.168.1.155 && ssh-copy-id -i ~/.ssh/
 commande ansible
 -----------------
 
-ansible-playbook -i inventory/dev/hosts playbook.yml -user=ansible --ask-become-pass --become
+all     : ansible-playbook -i inventory/dev/hosts playbook.yml -user=ansible --ask-become-pass --become
+partial : ansible-playbook -i inventory/dev/hosts playbook.yml --start-at-task="install packages" -user=ansible --ask-become-pass --become
+etape   : ansible-playbook -i inventory/dev/hosts playbook.yml -user=ansible --ask-become-pass --become --step
